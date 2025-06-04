@@ -1,0 +1,48 @@
+:root{
+    --bg-color:black;
+    --text-color:aquamarine;
+}
+.light-theme{
+    --bg-color:white;
+    --text-color:rgba(21, 21, 21, 0.486);
+}
+html{
+    background-color:var(--bg-color);
+    font-family: 'Courier New', Courier, monospace;
+    color:var(--text-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#terminal{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    min-height: 100vh;
+    white-space:pre-wrap ;
+}
+#output-container{
+    overflow: auto;
+    display: flex;
+
+    flex-direction: column;
+}
+#output>div{
+    margin-bottom: 0.5rem;
+}
+#input-line{
+    display: flex;
+    text-align: left;
+}
+.cursor{
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
+::-webkit-scrollbar{
+    display: none;
+}
