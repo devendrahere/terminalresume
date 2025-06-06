@@ -196,7 +196,7 @@ function typeOut(text, targetElement, callback) {
             clearInterval(interval);
             if (callback) callback();
         }
-    }, 15);
+    }, 25);
 }
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme == "light") {
